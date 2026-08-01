@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/test_can_loopback.dir/link.d CMakeFiles/test_can_loopback.dir/test_can_loopback.cpp.o -o test_can_loopback  libcan.a

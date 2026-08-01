@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/daemon.dir/link.d CMakeFiles/daemon.dir/Src/main.cpp.o -o daemon  -li2c Drivers/BME280/libbme280.a Drivers/CAN/libcan.a -lpthread -li2c /usr/lib/aarch64-linux-gnu/libgpiod.so

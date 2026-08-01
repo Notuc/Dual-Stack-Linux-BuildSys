@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build",
+  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Inc -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/BME280 -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/daemon.dir/Src/main.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Src/main.cpp",
+  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Src/main.cpp",
+  "output": "CMakeFiles/daemon.dir/Src/main.cpp.o"
+},
+{
+  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/BME280",
+  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/BME280 -std=gnu++20 -o CMakeFiles/bme280.dir/bme280.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/BME280/bme280.cpp",
+  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/BME280/bme280.cpp",
+  "output": "Drivers/BME280/CMakeFiles/bme280.dir/bme280.cpp.o"
+},
+{
+  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN",
+  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/can.dir/can.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp",
+  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp",
+  "output": "Drivers/CAN/CMakeFiles/can.dir/can.cpp.o"
+},
+{
+  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN",
+  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/can.dir/can_interface.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.cpp",
+  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.cpp",
+  "output": "Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o"
+},
+{
+  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN",
+  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/test_can_loopback.dir/test_can_loopback.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/test_can_loopback.cpp",
+  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/test_can_loopback.cpp",
+  "output": "Drivers/CAN/CMakeFiles/test_can_loopback.dir/test_can_loopback.cpp.o"
+},
+{
+  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN",
+  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/test_can_filter.dir/test_can_filter.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/test_can_filter.cpp",
+  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/test_can_filter.cpp",
+  "output": "Drivers/CAN/CMakeFiles/test_can_filter.dir/test_can_filter.cpp.o"
+}
+]
