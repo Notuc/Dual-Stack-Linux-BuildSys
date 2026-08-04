@@ -1,5 +1,4 @@
 add_library(can STATIC
-    can.cpp
     can_interface.cpp
 )
 

@@ -13,22 +13,28 @@ extern "C" {
 BME280::BME280(const char *bus_path, uint8_t addr) : m_addr(addr) {
   m_fd = open(bus_path, O_RDWR);
   if (m_fd >= 0) {
+    // Bind this fd to the target 7-bit slave address for all subsequent
+    // read()/write()/ioctl() calls made through it.
     ioctl(m_fd, I2C_SLAVE, m_addr);
   }
 }
 
+// Release the underlying Linux file descriptor, if one was successfully
+// opened. Unlike the STM32 target (where the I2C peripheral is always
+// "on" and doesn't need explicit teardown), a Linux fd is a real OS
+// resource and must be closed to avoid leaking it.
 BME280::~BME280() {
   if (m_fd >= 0)
     close(m_fd);
 }
 
 void BME280::parseCalibration(const uint8_t *c1, const uint8_t *c2) {
-  // --- UNCHANGED from your STM32 version, byte-order math is
-  // platform-independent ---
+  // UNCHANGED from STM32 version,
+  // Temperature coefficiets
   m_calib.dig_T1 = static_cast<uint16_t>(c1[0] | (c1[1] << 8));
   m_calib.dig_T2 = static_cast<int16_t>(c1[2] | (c1[3] << 8));
   m_calib.dig_T3 = static_cast<int16_t>(c1[4] | (c1[5] << 8));
-
+  // Pressure coefficiets
   m_calib.dig_P1 = static_cast<uint16_t>(c1[6] | (c1[7] << 8));
   m_calib.dig_P2 = static_cast<int16_t>(c1[8] | (c1[9] << 8));
   m_calib.dig_P3 = static_cast<int16_t>(c1[10] | (c1[11] << 8));
@@ -38,9 +44,8 @@ void BME280::parseCalibration(const uint8_t *c1, const uint8_t *c2) {
   m_calib.dig_P7 = static_cast<int16_t>(c1[18] | (c1[19] << 8));
   m_calib.dig_P8 = static_cast<int16_t>(c1[20] | (c1[21] << 8));
   m_calib.dig_P9 = static_cast<int16_t>(c1[22] | (c1[23] << 8));
-
+  // Humidity coefficiets
   m_calib.dig_H1 = c1[25];
-
   m_calib.dig_H2 = static_cast<int16_t>(c2[0] | (c2[1] << 8));
   m_calib.dig_H3 = c2[2];
   m_calib.dig_H4 = static_cast<int16_t>((c2[3] << 4) | (c2[4] & 0x0F));
@@ -145,7 +150,8 @@ std::tuple<BME280::Status, BME280::Telemetry> BME280::readAll() {
                   (static_cast<int32_t>(raw[4]) << 4) | (raw[5] >> 4);
   int32_t adc_H = (static_cast<int32_t>(raw[6]) << 8) | raw[7];
 
-  // Temperature
+  // Temperature Compensation (Bosch reference formula)
+
   int32_t var1 =
       ((((adc_T >> 3) - (static_cast<int32_t>(m_calib.dig_T1) << 1))) *
        static_cast<int32_t>(m_calib.dig_T2)) >>
@@ -159,7 +165,7 @@ std::tuple<BME280::Status, BME280::Telemetry> BME280::readAll() {
   int32_t T = (m_tFine * 5 + 128) >> 8;
   data.temperature_degC = static_cast<float>(T) / 100.0f;
 
-  // Pressure
+  // Pressure Compensation (Bosch reference formula)
 
   int64_t p_var1 = static_cast<int64_t>(m_tFine) - 128000;
   int64_t p_var2 = p_var1 * p_var1 * static_cast<int64_t>(m_calib.dig_P6);
@@ -184,7 +190,8 @@ std::tuple<BME280::Status, BME280::Telemetry> BME280::readAll() {
     data.pressure_hPa = (static_cast<float>(p) / 256.0f) / 100.0f;
   }
 
-  // Humidity
+  // Humidity Compensation (Bosch reference formula)
+
   int32_t v_x1_u32r = m_tFine - 76800;
   v_x1_u32r =
       (((((adc_H << 14) - (static_cast<int32_t>(m_calib.dig_H4) << 20) -
