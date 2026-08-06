@@ -1,0 +1,4 @@
+menu "Telemetry packages"
+	source "$BR2_EXTERNAL_TELEMETRY_PATH/package/telemetry-daemon/Config.in"
+	source "$BR2_EXTERNAL_TELEMETRY_PATH/package/logging-service/Config.in"
+endmenu

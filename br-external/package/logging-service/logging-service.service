@@ -1,0 +1,11 @@
+[Unit]
+Description=Telemetry Logging Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/logging-service
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

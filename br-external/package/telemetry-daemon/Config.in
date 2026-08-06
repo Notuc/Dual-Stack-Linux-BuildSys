@@ -1,0 +1,6 @@
+config BR2_PACKAGE_TELEMETRY_DAEMON
+	bool "telemetry-daemon"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_LIBI2C
+	help
+	  CAN bus and BME280 telemetry daemon.

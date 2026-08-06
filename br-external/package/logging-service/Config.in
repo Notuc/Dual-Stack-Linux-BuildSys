@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LOGGING_SERVICE
+	bool "logging-service"
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Receives telemetry data over Unix socket and writes to disk.
