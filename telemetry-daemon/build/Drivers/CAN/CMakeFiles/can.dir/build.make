@@ -72,24 +72,10 @@ include Drivers/CAN/CMakeFiles/can.dir/flags.make
 Drivers/CAN/CMakeFiles/can.dir/codegen:
 .PHONY : Drivers/CAN/CMakeFiles/can.dir/codegen
 
-Drivers/CAN/CMakeFiles/can.dir/can.cpp.o: Drivers/CAN/CMakeFiles/can.dir/flags.make
-Drivers/CAN/CMakeFiles/can.dir/can.cpp.o: /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp
-Drivers/CAN/CMakeFiles/can.dir/can.cpp.o: Drivers/CAN/CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Drivers/CAN/CMakeFiles/can.dir/can.cpp.o"
-	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Drivers/CAN/CMakeFiles/can.dir/can.cpp.o -MF CMakeFiles/can.dir/can.cpp.o.d -o CMakeFiles/can.dir/can.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp
-
-Drivers/CAN/CMakeFiles/can.dir/can.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/can.dir/can.cpp.i"
-	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp > CMakeFiles/can.dir/can.cpp.i
-
-Drivers/CAN/CMakeFiles/can.dir/can.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/can.dir/can.cpp.s"
-	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp -o CMakeFiles/can.dir/can.cpp.s
-
 Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o: Drivers/CAN/CMakeFiles/can.dir/flags.make
 Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o: /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.cpp
 Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o: Drivers/CAN/CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o"
 	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o -MF CMakeFiles/can.dir/can_interface.cpp.o.d -o CMakeFiles/can.dir/can_interface.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.cpp
 
 Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.i: cmake_force
@@ -102,17 +88,15 @@ Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.s: cmake_force
 
 # Object files for target can
 can_OBJECTS = \
-"CMakeFiles/can.dir/can.cpp.o" \
 "CMakeFiles/can.dir/can_interface.cpp.o"
 
 # External object files for target can
 can_EXTERNAL_OBJECTS =
 
-Drivers/CAN/libcan.a: Drivers/CAN/CMakeFiles/can.dir/can.cpp.o
 Drivers/CAN/libcan.a: Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o
 Drivers/CAN/libcan.a: Drivers/CAN/CMakeFiles/can.dir/build.make
 Drivers/CAN/libcan.a: Drivers/CAN/CMakeFiles/can.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcan.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcan.a"
 	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN && $(CMAKE_COMMAND) -P CMakeFiles/can.dir/cmake_clean_target.cmake
 	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/can.dir/link.txt --verbose=$(VERBOSE)
 

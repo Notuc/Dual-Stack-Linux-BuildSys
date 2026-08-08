@@ -1,2 +1,2 @@
-/usr/bin/ar qc libcan.a CMakeFiles/can.dir/can.cpp.o CMakeFiles/can.dir/can_interface.cpp.o
+/usr/bin/ar qc libcan.a CMakeFiles/can.dir/can_interface.cpp.o
 /usr/bin/ranlib libcan.a

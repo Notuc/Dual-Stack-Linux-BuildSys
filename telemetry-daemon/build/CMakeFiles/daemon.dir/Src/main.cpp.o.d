@@ -125,7 +125,30 @@ CMakeFiles/daemon.dir/Src/main.cpp.o: \
  /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
  /usr/include/c++/14/bits/uses_allocator.h \
  /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
- /usr/include/c++/14/bits/ranges_util.h /usr/include/unistd.h \
+ /usr/include/c++/14/bits/ranges_util.h \
+ /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.hpp \
+ /usr/include/linux/can.h /usr/include/linux/types.h \
+ /usr/lib/linux/uapi/arm64/asm/types.h /usr/include/asm-generic/types.h \
+ /usr/include/asm-generic/int-ll64.h \
+ /usr/lib/linux/uapi/arm64/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h /usr/lib/linux/uapi/arm64/asm/posix_types.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/socket.h \
+ /usr/include/c++/14/vector /usr/include/c++/14/bits/stl_uninitialized.h \
+ /usr/include/c++/14/bits/stl_vector.h \
+ /usr/include/c++/14/bits/stl_bvector.h \
+ /usr/include/c++/14/bits/vector.tcc /usr/include/c++/14/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/aarch64-linux-gnu/sys/socket.h \
+ /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/aarch64-linux-gnu/bits/socket.h \
+ /usr/include/aarch64-linux-gnu/bits/socket_type.h \
+ /usr/include/aarch64-linux-gnu/bits/sockaddr.h \
+ /usr/lib/linux/uapi/arm64/asm/socket.h /usr/include/asm-generic/socket.h \
+ /usr/lib/linux/uapi/arm64/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/aarch64-linux-gnu/bits/types/struct_osockaddr.h \
+ /usr/include/aarch64-linux-gnu/sys/un.h /usr/include/unistd.h \
  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
  /usr/include/aarch64-linux-gnu/bits/environments.h \
  /usr/include/aarch64-linux-gnu/bits/confname.h \

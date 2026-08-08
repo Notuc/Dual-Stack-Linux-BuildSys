@@ -203,30 +203,6 @@ test_can_filter/fast:
 	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build && $(MAKE) $(MAKESILENT) -f Drivers/CAN/CMakeFiles/test_can_filter.dir/build.make Drivers/CAN/CMakeFiles/test_can_filter.dir/build
 .PHONY : test_can_filter/fast
 
-can.o: can.cpp.o
-.PHONY : can.o
-
-# target to build an object file
-can.cpp.o:
-	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build && $(MAKE) $(MAKESILENT) -f Drivers/CAN/CMakeFiles/can.dir/build.make Drivers/CAN/CMakeFiles/can.dir/can.cpp.o
-.PHONY : can.cpp.o
-
-can.i: can.cpp.i
-.PHONY : can.i
-
-# target to preprocess a source file
-can.cpp.i:
-	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build && $(MAKE) $(MAKESILENT) -f Drivers/CAN/CMakeFiles/can.dir/build.make Drivers/CAN/CMakeFiles/can.dir/can.cpp.i
-.PHONY : can.cpp.i
-
-can.s: can.cpp.s
-.PHONY : can.s
-
-# target to generate assembly for a file
-can.cpp.s:
-	cd /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build && $(MAKE) $(MAKESILENT) -f Drivers/CAN/CMakeFiles/can.dir/build.make Drivers/CAN/CMakeFiles/can.dir/can.cpp.s
-.PHONY : can.cpp.s
-
 can_interface.o: can_interface.cpp.o
 .PHONY : can_interface.o
 
@@ -314,9 +290,6 @@ help:
 	@echo "... can"
 	@echo "... test_can_filter"
 	@echo "... test_can_loopback"
-	@echo "... can.o"
-	@echo "... can.i"
-	@echo "... can.s"
 	@echo "... can_interface.o"
 	@echo "... can_interface.i"
 	@echo "... can_interface.s"

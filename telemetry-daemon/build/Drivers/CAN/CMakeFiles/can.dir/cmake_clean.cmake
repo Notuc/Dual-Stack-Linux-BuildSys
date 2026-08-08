@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/can.dir/can.cpp.o"
-  "CMakeFiles/can.dir/can.cpp.o.d"
   "CMakeFiles/can.dir/can_interface.cpp.o"
   "CMakeFiles/can.dir/can_interface.cpp.o.d"
   "libcan.a"

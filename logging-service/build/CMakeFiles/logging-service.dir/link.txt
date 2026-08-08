@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/logging-service.dir/link.d "CMakeFiles/logging-service.dir/Src/main.cpp.o" -o logging-service

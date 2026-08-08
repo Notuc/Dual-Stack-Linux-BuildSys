@@ -13,12 +13,6 @@
 },
 {
   "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN",
-  "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/can.dir/can.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp",
-  "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can.cpp",
-  "output": "Drivers/CAN/CMakeFiles/can.dir/can.cpp.o"
-},
-{
-  "directory": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/build/Drivers/CAN",
   "command": "/usr/bin/c++  -I/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN -std=gnu++20 -o CMakeFiles/can.dir/can_interface.cpp.o -c /home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.cpp",
   "file": "/home/gundamnatted/Projects/Dual-Stack-Linux-BuildSys/telemetry-daemon/Drivers/CAN/can_interface.cpp",
   "output": "Drivers/CAN/CMakeFiles/can.dir/can_interface.cpp.o"
