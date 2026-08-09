@@ -138,7 +138,7 @@ Drivers/BME280/CMakeFiles/bme280.dir/bme280.cpp.o: \
  /usr/lib/linux/uapi/arm64/asm/bitsperlong.h \
  /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
  /usr/include/linux/stddef.h /usr/lib/linux/uapi/arm64/asm/posix_types.h \
- /usr/include/asm-generic/posix_types.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/i2c.h \
  /usr/include/aarch64-linux-gnu/sys/ioctl.h \
  /usr/include/aarch64-linux-gnu/bits/ioctls.h \
  /usr/lib/linux/uapi/arm64/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
@@ -152,5 +152,4 @@ Drivers/BME280/CMakeFiles/bme280.dir/bme280.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/i2c/smbus.h \
- /usr/include/linux/i2c.h
+ /usr/include/linux/close_range.h

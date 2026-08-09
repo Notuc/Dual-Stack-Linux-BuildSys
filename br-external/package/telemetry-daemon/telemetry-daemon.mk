@@ -2,7 +2,6 @@ TELEMETRY_DAEMON_VERSION = 1.0
 TELEMETRY_DAEMON_SITE = $(BR2_EXTERNAL_TELEMETRY_PATH)/../telemetry-daemon
 TELEMETRY_DAEMON_SITE_METHOD = local
 
-TELEMETRY_DAEMON_DEPENDENCIES = libi2c
 
 define TELEMETRY_DAEMON_BUILD_CMDS
 	$(MAKE) CXX="$(TARGET_CXX)" \
@@ -20,6 +19,7 @@ define TELEMETRY_DAEMON_INSTALL_TARGET_CMDS
 endef
 
 define TELEMETRY_DAEMON_INSTALL_INIT_SYSTEMD
+        mkdir -p $(TARGET_DIR)/etc/systemd/system/multi-user.target.wants
 	ln -sf /etc/systemd/system/telemetry-daemon.service \
 		$(TARGET_DIR)/etc/systemd/system/multi-user.target.wants/telemetry-daemon.service
 endef

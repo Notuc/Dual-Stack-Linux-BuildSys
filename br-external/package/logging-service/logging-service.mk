@@ -18,6 +18,7 @@ define LOGGING_SERVICE_INSTALL_TARGET_CMDS
 endef
 
 define LOGGING_SERVICE_INSTALL_INIT_SYSTEMD
+	mkdir -p $(TARGET_DIR)/etc/systemd/system/multi-user.target.wants
 	ln -sf /etc/systemd/system/logging-service.service \
 		$(TARGET_DIR)/etc/systemd/system/multi-user.target.wants/logging-service.service
 endef

@@ -4,11 +4,9 @@
 #include <cstring>
 #include <fcntl.h>
 #include <linux/i2c-dev.h>
+#include <linux/i2c.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
-extern "C" {
-#include <i2c/smbus.h>
-}
 
 BME280::BME280(const char *bus_path, uint8_t addr) : m_addr(addr) {
   m_fd = open(bus_path, O_RDWR);
@@ -60,24 +58,46 @@ void BME280::parseCalibration(const uint8_t *c1, const uint8_t *c2) {
 //
 
 BME280::Status BME280::memRead(uint8_t reg, uint8_t *buf, uint8_t len) {
-  errno = 0;
-  int n = i2c_smbus_read_i2c_block_data(m_fd, reg, len, buf);
-  if (n < 0) {
-    fprintf(stderr, "memRead failed: fd=%d reg=0x%02X len=%d errno=%d (%s)\n",
-            m_fd, reg, len, errno, strerror(errno));
-    return Status::IO_ERROR;
-  }
-  if (n != len) {
-    fprintf(stderr, "memRead short: reg=0x%02X expected=%d got=%d\n", reg, len,
-            n);
+  struct i2c_msg msgs[2];
+  struct i2c_rdwr_ioctl_data data;
+
+  msgs[0].addr = m_addr;
+  msgs[0].flags = 0;
+  msgs[0].len = 1;
+  msgs[0].buf = &reg;
+
+  msgs[1].addr = m_addr;
+  msgs[1].flags = I2C_M_RD;
+  msgs[1].len = len;
+  msgs[1].buf = buf;
+
+  data.msgs = msgs;
+  data.nmsgs = 2;
+
+  if (ioctl(m_fd, I2C_RDWR, &data) < 0) {
+    fprintf(stderr, "memRead failed: reg=0x%02X errno=%d (%s)\n", reg, errno,
+            strerror(errno));
     return Status::IO_ERROR;
   }
   return Status::OK;
 }
 
 BME280::Status BME280::memWrite(uint8_t reg, uint8_t val) {
-  if (i2c_smbus_write_byte_data(m_fd, reg, val) < 0)
+  uint8_t buf[2] = {reg, val};
+  struct i2c_msg msg;
+  struct i2c_rdwr_ioctl_data data;
+
+  msg.addr = m_addr;
+  msg.flags = 0;
+  msg.len = 2;
+  msg.buf = buf;
+
+  data.msgs = &msg;
+  data.nmsgs = 1;
+
+  if (ioctl(m_fd, I2C_RDWR, &data) < 0) {
     return Status::IO_ERROR;
+  }
   return Status::OK;
 }
 
