@@ -1,6 +1,3 @@
-poky/
-meta-raspberrypi/
-buildroot/
 yocto-build/
 yocto-downloads/
 yocto-sstate/
