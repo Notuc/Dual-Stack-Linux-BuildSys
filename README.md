@@ -6,6 +6,7 @@ with each build system — enabling a direct comparison of toolchains, boot time
 image sizes, etc. 
 
 ## Hardware
+![Hardware Setup](docs/hadware_setup.jpeg) 
 
 | Component | Purpose |
 |---|---|
@@ -30,11 +31,15 @@ BME280 ──I2C──► telemetry-daemon ──Unix socket──► logging-se
 - Broadcasts sensor data as CAN frames on IDs 0x100 (temp), 0x101 (pressure), 0x102 (humidity)
 - Streams formatted data to logging-service over Unix domain socket
 - Managed by systemd, restarts automatically on failure
+![Telemetry Daemon](docs/telementry_daemon.jpeg)
 
 ### logging-service (C++)
 - Listens on Unix socket at /var/run/telemetry.sock
 - Writes structured telemetry data to /var/log/telemetry.csv
 - Managed by systemd, starts before telemetry-daemon
+
+### CAN Bus Frames on Pi4
+![CAN Dump](docs/candump.png)
 
 ## Build Systems
 
