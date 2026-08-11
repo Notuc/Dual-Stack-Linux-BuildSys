@@ -6,7 +6,9 @@ with each build system — enabling a direct comparison of toolchains, boot time
 image sizes, etc. 
 
 ## Hardware
-![Hardware Setup](docs/hadware_setup.jpeg) 
+
+  <img src="docs/hadware_setup.jpeg" width="400"/>
+
 
 | Component | Purpose |
 |---|---|
