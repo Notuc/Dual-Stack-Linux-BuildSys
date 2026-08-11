@@ -1,0 +1,11 @@
+poky/
+meta-raspberrypi/
+buildroot/
+yocto-build/
+yocto-downloads/
+yocto-sstate/
+*.img
+*.wic
+*.wic.bz2
+*.ext3
+*.ext4

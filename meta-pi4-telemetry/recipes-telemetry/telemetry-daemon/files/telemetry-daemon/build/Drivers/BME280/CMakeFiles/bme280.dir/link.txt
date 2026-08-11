@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbme280.a CMakeFiles/bme280.dir/bme280.cpp.o
+/usr/bin/ranlib libbme280.a

@@ -1,0 +1,12 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/daemon.dir/link.d"
+  "CMakeFiles/daemon.dir/Src/main.cpp.o"
+  "CMakeFiles/daemon.dir/Src/main.cpp.o.d"
+  "daemon"
+  "daemon.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/daemon.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
